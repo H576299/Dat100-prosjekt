@@ -59,7 +59,11 @@ public class ShowProfile extends EasyGraphics {
 
 			// TODO
 			// OPPGAVE - START
-
+			y1 = ybase;
+			y2 = ybase - (int)elevations[i];
+			x1 = i+i*1;
+			x2 = i+i*1;
+			drawLine(x1, y1, x2, y2);
 			// regn ut koordinator for søylen / linjen
 			// (x1,y1) er startpunkt for søylen (linjen)
 			// (x2,y2) er slutt punkt.

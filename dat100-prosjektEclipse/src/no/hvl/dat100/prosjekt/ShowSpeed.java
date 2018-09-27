@@ -53,8 +53,23 @@ public class ShowSpeed extends EasyGraphics {
 		double[] speeds = gpscomputer.speeds();
 		
 		// TODO:
-		
-		// OPPGAVE - START		
+		int x1, y1, x2, y2;
+		int sum=0;
+		setColor(0,0,255);
+		// OPPGAVE - START	
+		for(int i=0;i<speeds.length-1;i++) {
+		y1 = ybase;
+		y2 = ybase - ((int)speeds[i])*3;
+		x1 = i+i*1;
+		x2 = i+i*1;
+		drawLine(x1, y1, x2, y2);
+		sum+=(int)speeds[i];
+		while(i==((speeds.length-1)-2)) {
+		int gSpeed = sum/(N);
+		setColor(0, 255, 0);
+		drawLine(0, ybase-gSpeed*3, ((speeds.length-1)-1)+1*((speeds.length-1)-1), ybase-gSpeed*3);
+		}
+		}
 		
 		// OPPGAVE - SLUTT
 	}
